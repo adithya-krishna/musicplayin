@@ -1,0 +1,13 @@
+@function color($key, $alpha: null) {
+    @if map-has-key($color-list, $key) {
+        $color: map-get($color-list, $key);
+        @if ($alpha) {
+            @return rgba($color,$alpha);
+        }
+
+        @return $color;
+    }
+    @warn "Unknown `#{$key}` in $color-list.";
+
+    @return null;
+}

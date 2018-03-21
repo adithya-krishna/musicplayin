@@ -1,0 +1,51 @@
+$color-list: ( // sass map
+  //dark
+  steel: #707d8e,
+  slate: #383F47,
+  slate-grey: #57616e,
+  charcoal-grey: #323b47,
+  dark: #14171c,
+  black: #000000,
+  grey-bg: rgb(137, 137, 137),
+
+  //blues
+  dusk-blue: #2e5b9d,
+  dusk-blue-two: #264b82,
+  azure: #28A8FB,
+  cornflower-blue: #3f7cd9,
+  dark-sky-blue: #4e8eed,
+
+  //greens
+  aqua-marine:#56deb4,
+  shamrock-green: #08cf4a,
+  cool-green:  #34CA62,
+  dark-mint: #4bd074,
+  grass: #2db64a,
+  green-teal: #11c261,
+
+  //reds & yellows
+  salmon: #ff9266,
+  salmon-two: #ff6666,
+  mango: #fdb62c,
+  sun-yellow: #fff024,
+  star-yellow: #f8cc2f,
+  dull-red: #b34747,
+  light-gold: #ffcb63,
+
+  //light
+  white: #ffffff,
+  off-white: #eeeeee,
+  pale-grey: #f7f7f8,
+  white-two: #fbfbfb,
+  white-three: #ebebeb,
+  pale-grey-two: #e7e9ec,
+  pale-grey-three: #dfe1e6,
+  pale-grey-four: #eff1f4,
+  pale-grey-five: #f7f9fb,
+  pale-grey-six: #EBECED,
+  pale-grey-seven: #fafafa,
+  blue-grey-light: #f8f8f9,
+
+  //special
+  transparent: rgba(0,0,0,0)
+);

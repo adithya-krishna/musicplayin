@@ -1,6 +1,7 @@
 const webpack = require('webpack'); //eslint-disable-line no-unused-vars
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
@@ -31,7 +32,8 @@ const loaders = [
             sourceMap: true,
             importLoaders: 2,
             localIdentName: '[name]__[local]--[hash:base64:5]',
-            minimize: false
+            minimize: false,
+            url: false
         }
     },
     {
@@ -107,7 +109,17 @@ const baseConfig = {
         extensions: ['.js', '.jsx', '.json', '.scss'],
         modules: [path.resolve(__dirname, 'app'), 'node_modules']
     },
-    plugins: [new CleanWebpackPlugin(['build']), extractSass]
+    plugins: [
+        new CleanWebpackPlugin(['build']),
+        extractSass,
+        new CopyWebpackPlugin([
+            {
+                context: 'app/static',
+                from: '**/*',
+                to: 'static'
+            }
+        ])
+    ]
 };
 
 module.exports = baseConfig;
