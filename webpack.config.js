@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack = require('webpack'); //eslint-disable-line no-unused-vars
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -76,9 +76,7 @@ const baseConfig = {
             {
                 test: /\.js[x]?$/,
                 include: path.resolve(__dirname, 'app'),
-                exclude: [
-                    path.resolve(__dirname, 'node_modules'),
-                ],
+                exclude: [path.resolve(__dirname, 'node_modules')],
                 use: {
                     loader: 'babel-loader',
                     query: {
@@ -107,15 +105,9 @@ const baseConfig = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.scss'],
-        modules: [
-            path.resolve(__dirname, "app"),
-            'node_modules'
-        ]
+        modules: [path.resolve(__dirname, 'app'), 'node_modules']
     },
-    plugins: [
-        new CleanWebpackPlugin(['build']),
-        extractSass
-    ]
+    plugins: [new CleanWebpackPlugin(['build']), extractSass]
 };
 
 module.exports = baseConfig;

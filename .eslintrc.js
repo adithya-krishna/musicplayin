@@ -13,6 +13,8 @@ module.exports = {
     },
     globals: {
         require: true,
+        "__dirname": true,
+        module: true
     },
     rules: {
         'prettier/prettier': [

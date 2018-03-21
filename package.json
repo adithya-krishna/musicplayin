@@ -44,7 +44,6 @@
 		"postcss-sassy-mixins": "^2.1.0",
 		"postcss-scss": "^1.0.4",
 		"prettier": "^1.11.1",
-		"redux-devtools-extension": "^2.13.2",
 		"sass-loader": "^6.0.7",
 		"source-map-loader": "^0.2.3",
 		"style-loader": "^0.20.3",
@@ -56,7 +55,15 @@
 	},
 	"dependencies": {
 		"lodash": "^4.17.5",
+		"material-ui": "^0.20.0",
+		"normalize.css": "^8.0.0",
 		"react": "^16.2.0",
-		"react-dom": "^16.2.0"
+		"react-dom": "^16.2.0",
+		"react-redux": "^5.0.7",
+		"react-router-dom": "^4.2.2",
+		"redux": "^3.7.2",
+		"redux-devtools-extension": "^2.13.2",
+		"redux-persist": "^5.9.1",
+		"redux-thunk": "^2.2.0"
 	}
 }
