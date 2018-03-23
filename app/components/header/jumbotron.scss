@@ -4,4 +4,26 @@
     position: relative;
     width: 100vw;
     height: 570px;
+
+    .bannerText {
+        color: color(white);
+        position: absolute;
+        top: 40%;
+        right: 0;
+        background: color(black, 0.6);
+        border-radius: 3px;
+        padding: 1rem 5rem;
+
+        .title, .subtitle {
+            margin: 1rem 0;
+            font-size: 3.5rem;
+            font-weight: 400;
+            font-family: 'Montserrat', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            letter-spacing: 0.8rem;
+        }
+    }
 }

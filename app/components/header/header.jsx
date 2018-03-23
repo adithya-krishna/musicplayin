@@ -1,23 +1,40 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import NavigationClose from 'material-ui/svg-icons/action/home';
+import FlatButton from 'material-ui/FlatButton';
+import { darkBlack, white } from 'material-ui/styles/colors';
+
+const appBarStyles = {
+    backgroundColor: darkBlack
+};
+
+const iconRightStyle = {
+    margin: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+};
+
+const whiteText = { color: white };
 
 class Header extends PureComponent {
     renderRightIcons = () => {
         return (
-            <IconButton className="material-icons">
-                <NavigationClose />
-            </IconButton>
+            <Fragment>
+                <FlatButton label="Explore" style={whiteText} />
+                <FlatButton label="login" style={whiteText} />
+                <FlatButton label="signup" style={whiteText} />
+            </Fragment>
         );
     };
 
     render() {
         return (
             <AppBar
+                style={appBarStyles}
                 showMenuIconButton={false}
                 title={"Music Playin'"}
                 iconElementRight={this.renderRightIcons()}
+                iconStyleRight={iconRightStyle}
             />
         );
     }

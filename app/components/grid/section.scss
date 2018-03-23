@@ -1,0 +1,11 @@
+@import 'styles/base';
+
+.section {
+    min-height: 4rem;
+    background-color: white;
+    border-radius: 3px;
+    padding: 2rem;
+    margin: 0.8rem 0;
+
+    @include zDepth1;
+}

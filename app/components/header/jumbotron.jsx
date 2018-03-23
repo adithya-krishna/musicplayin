@@ -15,6 +15,10 @@ export default class Jumbotron extends Component {
         return (
             <div className={theme.bannerWrapper}>
                 <Slider images={images} />
+                <div className={theme.bannerText}>
+                    <h1 className={theme.title}>Music Playin'</h1>
+                    <h2 className={theme.subtitle}>LEARN | PLAY | HARMONIZE</h2>
+                </div>
             </div>
         );
     }
