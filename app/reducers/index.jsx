@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux';
 
-const store = combineReducers({});
+import tabReducer from 'reducers/tab';
+
+const store = combineReducers({
+    Tab: tabReducer
+});
 
 export default store;

@@ -6,23 +6,4 @@
     min-height: 2rem;
     margin: 0 auto;
     padding: 0 2rem;
-
-    .smallCardWrapper{
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        justify-content: space-between;
-
-        .smallCard{
-            width: 300px;
-            display: flex;
-            flex-direction: column;
-            padding: 2rem;
-            align-items: center;
-        }
-    }
-}
-
-.hoist {
-    top: -2rem;
 }
