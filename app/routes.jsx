@@ -9,9 +9,7 @@ export default class Routes extends Component {
     render() {
         return (
             <Router history={history}>
-                <Switch>
-                    <Route exact path="/" component={App} />
-                </Switch>
+                <Route path="/" component={App} />
             </Router>
         );
     }

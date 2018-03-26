@@ -16,6 +16,7 @@ import MusicNote from 'material-ui/svg-icons/image/music-note';
 import School from 'material-ui/svg-icons/social/school';
 import Store from 'material-ui/svg-icons/action/store';
 
+import Jumbotron from 'components/header/jumbotron';
 import Section from 'components/grid/section';
 import theme from './container.scss';
 
@@ -125,47 +126,55 @@ class Container extends PureComponent {
         });
     };
 
+    renderSubSection = () => {
+        return (
+            <Section>
+                <h1 style={{ textAlign: 'center' }}>
+                    SIGN UP WITH US AND GET MUSIC BUSY
+                </h1>
+                <Divider />
+                <div className={theme.smallCardWrapper}>
+                    <div className={theme.smallCard}>
+                        <MusicNote style={{ width: 196, height: 196 }} />
+                        <h2>MUSICIAN</h2>
+                        <p>
+                            If you play an instrument or sing, join us a a
+                            musician, we’ll give you details such as shows |
+                            other musicians | bands around you | jam rooms etc..
+                        </p>
+                    </div>
+                    <div className={theme.smallCard}>
+                        <School style={{ width: 196, height: 196 }} />
+                        <h2>MUSIC SCHOOL</h2>
+                        <p>
+                            Love to teach guitar or drums, actually any
+                            instrument, even singing. Sign up and we will put
+                            your details out there to the audience you are
+                            trying to reach.
+                        </p>
+                    </div>
+                    <div className={theme.smallCard}>
+                        <Store style={{ width: 196, height: 196 }} />
+                        <h2>STORES / JAM ROOM</h2>
+                        <p>
+                            Are you a music space? Selling or renting
+                            instruments or jam rooms? sign up and we will get
+                            people to your doorstep. Simply Simple
+                        </p>
+                    </div>
+                </div>
+            </Section>
+        );
+    };
+
     render() {
         return (
-            <div className={classnames(theme.container, theme.hoist)}>
-                {this.renderCards()}
-                <Section>
-                    <h1 style={{ textAlign: 'center' }}>
-                        SIGN UP WITH US AND GET MUSIC BUSY
-                    </h1>
-                    <Divider />
-                    <div className={theme.smallCardWrapper}>
-                        <div className={theme.smallCard}>
-                            <MusicNote style={{ width: 196, height: 196 }} />
-                            <h2>MUSICIAN</h2>
-                            <p>
-                                If you play an instrument or sing, join us a a
-                                musician, we’ll give you details such as shows |
-                                other musicians | bands around you | jam rooms
-                                etc..
-                            </p>
-                        </div>
-                        <div className={theme.smallCard}>
-                            <School style={{ width: 196, height: 196 }} />
-                            <h2>MUSIC SCHOOL</h2>
-                            <p>
-                                Love to teach guitar or drums, actually any
-                                instrument, even singing. Sign up and we will
-                                put your details out there to the audience you
-                                are trying to reach.
-                            </p>
-                        </div>
-                        <div className={theme.smallCard}>
-                            <Store style={{ width: 196, height: 196 }} />
-                            <h2>STORES / JAM ROOM</h2>
-                            <p>
-                                Are you a music space? Selling or renting
-                                instruments or jam rooms? sign up and we will
-                                get people to your doorstep. Simply Simple
-                            </p>
-                        </div>
-                    </div>
-                </Section>
+            <div>
+                <Jumbotron />
+                <div className={classnames(theme.container, theme.hoist)}>
+                    {this.renderCards()}
+                    {this.renderSubSection()}
+                </div>
             </div>
         );
     }

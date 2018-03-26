@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import { darkBlack, white } from 'material-ui/styles/colors';
@@ -20,7 +21,9 @@ class Header extends PureComponent {
     renderRightIcons = () => {
         return (
             <Fragment>
-                <FlatButton label="Explore" style={whiteText} />
+                <Link to={'explore'}>
+                    <FlatButton label="Explore" style={whiteText} />
+                </Link>
                 <FlatButton label="login" style={whiteText} />
                 <FlatButton label="signup" style={whiteText} />
             </Fragment>
