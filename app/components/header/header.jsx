@@ -31,11 +31,17 @@ class Header extends PureComponent {
     };
 
     render() {
+        const title = (
+            <Link
+                to={'/'}
+                style={{ textDecoration: 'none', ...whiteText }}
+            >{`Music Playin'`}</Link>
+        );
         return (
             <AppBar
                 style={appBarStyles}
                 showMenuIconButton={false}
-                title={"Music Playin'"}
+                title={title}
                 iconElementRight={this.renderRightIcons()}
                 iconStyleRight={iconRightStyle}
             />

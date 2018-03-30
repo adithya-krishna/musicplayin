@@ -1,16 +1,14 @@
 import TabActions from 'actions/tab';
 
-const initialState = {};
+const initialState = { fetchingTabs: false };
 
 const tab = (state = initialState, action) => {
     switch (action.type) {
         case TabActions.FETCH_ALL_TABS_START: {
-            console.log(action);
-            return state;
+            return { ...state, fetchingTabs: true };
         }
         case TabActions.FETCH_ALL_TABS_COMPLETE: {
-            console.log(action);
-            return state;
+            return { ...state, fetchingTabs: false, payload: action.payload };
         }
         default:
             return state;

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { BASE_URL, AUTH_TOKEN } from 'constants/globals';
 
-axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.common.Authorization = AUTH_TOKEN;
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 export default class TabActions {
@@ -18,8 +18,6 @@ export default class TabActions {
             axios
                 .get(`${BASE_URL}/tabs`)
                 .then(response => {
-                    console.log(response);
-
                     dispatch({
                         type: TabActions.FETCH_ALL_TABS_COMPLETE,
                         payload: response.data
