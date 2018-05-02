@@ -1,6 +1,25 @@
 @import 'styles/base.scss';
 @import 'styles/grid.scss';
 
-.exploreArea {
+.exploreArea,
+.tabViewArea {
     padding-top: 2rem;
+}
+
+.tabCard {
+    margin-bottom: 10px;
+}
+
+.chipSection {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.chord {
+    cursor: pointer;
+    color: color(cornflower-blue);
+}
+
+.line {
+    margin: 0.7rem 0;
 }

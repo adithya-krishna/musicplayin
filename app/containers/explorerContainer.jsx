@@ -7,8 +7,10 @@ import TabActions from 'actions/tab';
 
 class ExplorerContainer extends PureComponent {
     componentWillMount() {
-        const { getAllTabs } = this.props;
-        getAllTabs();
+        const { getAllTabs, tabs } = this.props;
+        if (!tabs.length) {
+            getAllTabs();
+        }
     }
 
     render() {
@@ -20,8 +22,8 @@ class ExplorerContainer extends PureComponent {
 const mapStateToProps = state => {
     // extract to a selector later
     let tabs = [];
-    if (state && state.Tab && !isEmpty(state.Tab.payload)) {
-        tabs = [...state.Tab.payload];
+    if (state && state.Tab && !isEmpty(state.Tab.allTabs)) {
+        tabs = [...state.Tab.allTabs];
     }
     return { tabs };
 };

@@ -7,27 +7,30 @@ import MusicCard from './musicCard';
 import theme from './explorer.scss';
 
 class Explorer extends PureComponent {
-    onViewHandler = () => {
-        console.log('viewing');
-    };
-
     renderCards = () => {
         const { tabs } = this.props;
         const oneOfThree = classnames(
             theme.grid__col,
-            theme['grid__col--1-of-3']
+            theme['grid__col--1-of-3'],
+            theme.tabCard
         );
 
         return map(tabs, tab => {
-            const { tabInfo: { songName, artist, ...chips }, lyric } = tab;
+            const {
+                tabInfo: { songName, artist, ...chips },
+                text,
+                lyric,
+                _id
+            } = tab;
             return (
-                <div key={`${tab._id}`} className={oneOfThree}>
+                <div key={`${_id}`} className={oneOfThree}>
                     <MusicCard
+                        id={_id}
                         title={songName}
                         subtitle={artist}
-                        cardText={lyric}
+                        cardText={text}
+                        lyric={lyric}
                         chips={chips}
-                        onView={this.onViewHandler}
                     />
                 </div>
             );

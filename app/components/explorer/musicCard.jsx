@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Card, CardActions, CardTitle, CardText } from 'material-ui/Card';
 import Chip from 'material-ui/Chip';
 import FlatButton from 'material-ui/FlatButton';
+import { Link } from 'react-router-dom';
 import forEach from 'lodash/forEach';
 import isEmpty from 'lodash/isEmpty';
 
@@ -26,7 +27,7 @@ class MusicCard extends PureComponent {
         return renderedChips;
     };
     render() {
-        const { title, subtitle, cardText, onView } = this.props;
+        const { title, subtitle, cardText, lyric, id } = this.props;
         return (
             <Card>
                 <CardTitle title={title} subtitle={subtitle} />
@@ -37,7 +38,9 @@ class MusicCard extends PureComponent {
                     </div>
                 </CardText>
                 <CardActions style={actionStyles}>
-                    <FlatButton label="View" onClick={onView} />
+                    <Link to={`/tab/${id}`}>
+                        <FlatButton label="View" />
+                    </Link>
                 </CardActions>
             </Card>
         );

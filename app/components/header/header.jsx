@@ -21,7 +21,7 @@ class Header extends PureComponent {
     renderRightIcons = () => {
         return (
             <Fragment>
-                <Link to={'explore'}>
+                <Link to={'/explore'}>
                     <FlatButton label="Explore" style={whiteText} />
                 </Link>
                 <FlatButton label="login" style={whiteText} />
